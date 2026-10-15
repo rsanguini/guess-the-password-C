@@ -17,7 +17,6 @@ int main()
     n2=(n/100)%10;
     n1=(n/1000)%10;
 
-        
     do
     {
     system("cls");
@@ -37,7 +36,7 @@ int main()
         exit(0);
     }
     }while(c!=1);
-    
+
     for(tentativa=1;tentativa<=10;tentativa++)
         {
         system("cls");
@@ -121,9 +120,97 @@ int main()
             printf("\n\n-----------------------------------------------------------------------------------------------------------------------");
             printf("\n\n\t-->Você acertou %d dígito(s)",acertos);
             printf("\n\n\t-->Continue tentando!!\n\n\n");
+
+        if (tentativa >= 5 && tentativa != 10)
+        {
+            printf("\t------ DICAS ------\n\t");
+            switch(tentativa)
+            {
+                case 5:
+                if (fix1 == -1)
+                    printf("-->Primeira dica: O primeiro n�mero � %s.\n\n\n", (n1 % 2 == 0) ? "par" : "�mpar");
+                else if (fix2 == -1)
+                    printf("-->Primeira dica: O segundo n�mero � %s.\n\n\n", (n2 % 2 == 0) ? "par" : "�mpar");
+                else if (fix3 == -1)
+                    printf("-->Primeira dica: O terceiro n�mero � %s.\n\n\n", (n3 % 2 == 0) ? "par" : "�mpar");
+                else if (fix4 == -1)
+                    printf("-->Primeira dica: O quarto n�mero � %s.\n\n\n", (n4 % 2 == 0) ? "par" : "�mpar");
+                break;
+
+                case 6:
+                {
+                int soma = n1 + n2 + n3 + n4;
+                printf("-->Segunda dica: A soma dos d�gitos da senha � %d.\n\n", soma);
+                break;
+                }
+
+                case 7:
+                {
+                int maior = n1;
+                if (n2 > maior) maior = n2;
+                if (n3 > maior) maior = n3;
+                if (n4 > maior) maior = n4;
+                printf("-->Terceira dica: O maior d�gito da senha � %d.\n\n", maior);
+                break;
+                }
+
+                case 8:
+                printf("-->Quarta dica: An�lise dos d�gitos ainda n�o descobertos:\n\t");
+                if (fix1 == -1)
+                printf("- O primeiro d�gito � %s que 5.\n\n\n", (n1 >= 5) ? "maior ou igual" : "menor");
+                if (fix2 == -1)
+                printf("- O segundo d�gito � %s que 5.\n", (n2 >= 5) ? "maior ou igual" : "menor");
+                if (fix3 == -1)
+                printf("- O terceiro d�gito � %s que 5.\n", (n3 >= 5) ? "maior ou igual" : "menor");
+                if (fix4 == -1)
+                printf("- O quarto d�gito � %s que 5.\n", (n4 >= 5) ? "maior ou igual" : "menor");
+                break;
+
+                case 9:
+                if (n1 == n2 || n1 == n3 || n1 == n4 || n2 == n3 || n2 == n4 || n3 == n4)
+                {
+                    printf("-->Quinta dica: A senha cont�m d�gitos repetidos.\n");
+                }
+                else
+                {
+                    printf("-->Quinta dica: Todos os d�gitos da senha s�o diferentes.\n");
+                }
+
+                break;
+            }
         }
         }
-        }while(j==1);
-            
-  return 0;
+            else
+            {
+                printf("\n\n");
+                printf("\n\n-----------------------------------------------------------------------------------------------------------------------");
+                printf("\n\n\t\t\tPARAB�NS!! Voc� acertou a senha em %d tentativa(s)!!\n\n\n\n", tentativa);
+                break;
+            }
+
+        printf("Pressione qualquer tecla para continuar\n\n");
+        getch();
+        }
+        if (fix1 == -1 || fix2 == -1 || fix3 == -1 || fix4 == -1)
+        {
+            system("cls");
+            printf("\n\n\n\t\t\tFim de jogo! O n�mero correto era %d.\n\n", n);
+        }
+
+    printf("Pressione qualquer tecla para continuar");
+    getch();
+    system("cls");
+    printf("\n\n\n\t\t\tDeseja jogar novamente?\n\n");
+    printf("\n\t\t\tDigite 1 para jogar novamente ou outro n�mero para encerrar: ",j);
+    scanf("%d",&j);
+
+    fix1 = fix2 = fix3 = fix4 = -1;
+    system("cls");
+
+    }while(j==1);
+
+    printf("\n\n\n\t\t\tObrigado por jogar!\n\n\n");
+
+    system ("pause");
+    return 0;
 }
