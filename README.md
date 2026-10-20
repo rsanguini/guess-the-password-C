@@ -1,4 +1,4 @@
-# 🎮 Jogo da Adivinhação de Senha em C
+#  Jogo da Adivinhação de Senha em C
 
 ![Linguagem C](https://img.shields.io/badge/Linguagem-C-blue.svg)
 ![Ambiente](https://img.shields.io/badge/Ambiente-VS%20Code-lightgrey.svg)
@@ -13,7 +13,7 @@ Mais do que um jogo, este projeto é um exercício prático de lógica de progra
 
 ---
 
-## 📌 Sumário
+##  Sumário
 
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Objetivos e Conceitos Aplicados](#-objetivos-e-conceitos-aplicados)
@@ -30,7 +30,7 @@ Mais do que um jogo, este projeto é um exercício prático de lógica de progra
 
 ---
 
-## 🎯 Sobre o Projeto
+##  Sobre o Projeto
 
 O Jogo da Adivinhação de Senha foi desenvolvido com o objetivo de praticar os fundamentos da programação utilizando a linguagem C.
 
@@ -52,7 +52,7 @@ O jogo também permite visualizar os dígitos já descobertos, mantendo essas po
 
 ---
 
-## 🧠 Objetivos e Conceitos Aplicados
+##  Objetivos e Conceitos Aplicados
 
 O desenvolvimento do projeto permite aplicar conceitos fundamentais da linguagem C em uma situação prática.
 
@@ -77,7 +77,7 @@ O desenvolvimento do projeto permite aplicar conceitos fundamentais da linguagem
 
 ---
 
-## 🎮 Regras do Jogo
+##  Regras do Jogo
 
 O funcionamento é simples: descubra a senha antes de esgotar suas tentativas.
 
@@ -95,7 +95,7 @@ O funcionamento é simples: descubra a senha antes de esgotar suas tentativas.
 
 ---
 
-## 💡 Sistema de Dicas
+##  Sistema de Dicas
 
 O jogo utiliza um sistema progressivo de dicas para auxiliar o jogador sem revelar a senha diretamente.
 
@@ -113,7 +113,7 @@ As dicas são apresentadas conforme o número da tentativa, incentivando o jogad
 
 ---
 
-## 🏗 Arquitetura e Fluxo de Execução
+##  Arquitetura e Fluxo de Execução
 
 O programa é organizado em uma sequência de etapas que controlam o início, a execução e o encerramento das partidas.
 
@@ -181,13 +181,15 @@ O fluxo utiliza estruturas de repetição aninhadas para controlar o menu inicia
 
 ---
 
-## 📂 Estrutura do Projeto
+##  Estrutura do Projeto
 
 A estrutura básica do repositório pode ser organizada da seguinte maneira:
 
 ```text
 jogo-adivinhacao-senha/
 ├── main.c
+├── jogo.exe
+├── .gitignore
 ├── README.md
 └── LICENSE
 ```
@@ -195,6 +197,8 @@ jogo-adivinhacao-senha/
 | Arquivo | Descrição |
 |---|---|
 | `main.c` | Contém a implementação da lógica do jogo. |
+| `jogo.exe` | Roda o jogo no terminal. |
+| `.gitignore` | Indica ao Git para quais arquivos, pastas ou extensões de um projeto não devem ser rastreados. |
 | `README.md` | Documentação do projeto, regras e instruções de execução. |
 | `LICENSE` | Define os termos de utilização e distribuição do código, caso a licença MIT seja incluída. |
 
@@ -202,7 +206,7 @@ Os nomes são sugestões de organização. Ajuste-os caso os arquivos do seu rep
 
 ---
 
-## 🛠 Tecnologias e Bibliotecas
+##  Tecnologias e Bibliotecas
 
 ### Linguagem
 
@@ -228,7 +232,7 @@ Os nomes são sugestões de organização. Ajuste-os caso os arquivos do seu rep
 
 ---
 
-## 💻 Principais Estruturas de Código
+##  Principais Estruturas de Código
 
 ### 1. Geração da senha secreta
 
@@ -407,14 +411,13 @@ Verifique a codificação do arquivo-fonte, preferencialmente UTF-8, e a configu
 
 ---
 
-## 🔧 Possíveis Melhorias
+##  Possíveis Melhorias
 
 O projeto pode evoluir com algumas melhorias técnicas e funcionais:
 
 - [ ] Separar a lógica do jogo em funções para melhorar a organização.
 - [ ] Tornar a leitura de entradas mais robusta.
 - [ ] Corrigir e centralizar o controle de vitória e derrota.
-- [ ] Remover a exibição da senha secreta durante as tentativas.
 - [ ] Inicializar o gerador pseudoaleatório uma única vez no início do programa.
 - [ ] Melhorar a portabilidade para Linux e macOS.
 - [ ] Adicionar níveis de dificuldade com diferentes limites de tentativas.
@@ -426,7 +429,7 @@ Essas melhorias podem tornar o programa mais robusto, modular e fácil de manter
 
 ---
 
-## 📄 Licença
+##  Licença
 
 Este projeto pode ser distribuído sob a licença MIT.
 
@@ -436,7 +439,7 @@ Para que essa indicação seja válida no repositório, inclua um arquivo `LICEN
 
 ---
 
-## 👤 Author
+##  Author
 
 **Rafael Sanguini Colagrossi** — Software Engineering Student
 
