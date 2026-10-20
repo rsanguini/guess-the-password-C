@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <time.h>
+#include <conio.h>
 
 int main()
     {
@@ -20,19 +21,19 @@ int main()
     do
     {
     system("cls");
-    printf("\n\t\t\t\t--SEJA BEM VINDO AO JOGO DA ADIVINHAÇÃO!!!!--");
+    printf("\n\t\t\t\t--SEJA BEM VINDO AO JOGO DA ADIVINHACAO!!!!--");
     printf("\n------------------------------------------------------------------------------------------------------------------------");
     printf("\n\n\t -Como funciona o jogo??");
-    printf("\n\n\t\t-->Este é o jogo onde você terá o objetivo de adivinhar uma senha aleatória que contém quatro dígitos(ou seja, está entre 1000 e 9999), em apenas 10 tentativas!!!\n\n\n");
+    printf("\n\n\t\t-->Este e o jogo onde voce tera o objetivo de adivinhar uma senha aleatoria que contem quatro digitos(ou seja, esta entre 1000 e 9999), em apenas 10 tentativas!!!\n\n\n");
     printf("------------------------------------------------------------------------------------------------------------------------");
-    printf("\n\n\t -Você deseja jogar???");
-    printf("\n\n\t\t -->Digite (1) para começar e (2) para sair: ");
+    printf("\n\n\t -Voce deseja jogar???");
+    printf("\n\n\t\t -->Digite (1) para comecar e (2) para sair: ");
     scanf("%d",&c);
     if(c==2)
     {
         system("cls");
         printf("\n\n\t\n\n\n \t\t\t\t\t\tOBRIGADO!!!");
-    printf("\n\n\t\n\n\n \t\t ---->Reinicie o programa caso voc� queira jogar mais tarde!!\n\n\n\n\n\n\n");
+    printf("\n\n\t\n\n\n \t\t ---->Reinicie o programa caso voce queira jogar mais tarde!!\n\n\n\n\n\n\n");
         exit(0);
     }
     }while(c!=1);
@@ -40,25 +41,25 @@ int main()
     for(tentativa=1;tentativa<=10;tentativa++)
         {
         system("cls");
-        printf("%d",n);
+        //printf("%d",n);   ----> número gerado impresso na tela para fazer testes (basta adicionar ele no código para revelar e testar todos os comandos do código)
         while(1)
             {
             printf("\t\t\t\t\t\tTentiva %d de 10:\n",tentativa);
             printf("------------------------------------------------------------------------------------------------------------------------");
-            printf("\n\t*!!Lembre-se que a senha é composta por um número entre 1000 e 9999!!*\n\n");
+            printf("\n\t*!!Lembre-se que a senha e composta por um numero entre 1000 e 9999!!*\n\n");
             printf("\n\t-->Digite uma tentativa de senha: ",x);
             if (scanf("%d",&x)!=1)
                 {
-                printf("\nNúmero inválido.\nDigite novamente.\n\n");
+                printf("\nNumero invalido.\nDigite novamente.\n\n");
                 while (getchar() != '\n');
                     {
-                    getch();
+                    _getch();
                     system("cls");
                     }
                 }
             else if(x<1000||x>9999)
                 {
-                printf("\nNúmero inválido.\nDigite novamente.\n\n");
+                printf("\nNumero invalido.\nDigite novamente.\n\n");
                 }
             else
                 {
@@ -118,7 +119,7 @@ int main()
         if(acertos!=4)
         {
             printf("\n\n-----------------------------------------------------------------------------------------------------------------------");
-            printf("\n\n\t-->Você acertou %d dígito(s)",acertos);
+            printf("\n\n\t-->Voce acertou %d digito(s)",acertos);
             printf("\n\n\t-->Continue tentando!!\n\n\n");
 
         if (tentativa >= 5 && tentativa != 10)
@@ -128,19 +129,19 @@ int main()
             {
                 case 5:
                 if (fix1 == -1)
-                    printf("-->Primeira dica: O primeiro n�mero � %s.\n\n\n", (n1 % 2 == 0) ? "par" : "�mpar");
+                    printf("-->Primeira dica: O primeiro numero e %s.\n\n\n", (n1 % 2 == 0) ? "par" : "impar");
                 else if (fix2 == -1)
-                    printf("-->Primeira dica: O segundo n�mero � %s.\n\n\n", (n2 % 2 == 0) ? "par" : "�mpar");
+                    printf("-->Primeira dica: O segundo numero e %s.\n\n\n", (n2 % 2 == 0) ? "par" : "impar");
                 else if (fix3 == -1)
-                    printf("-->Primeira dica: O terceiro n�mero � %s.\n\n\n", (n3 % 2 == 0) ? "par" : "�mpar");
+                    printf("-->Primeira dica: O terceiro numero e %s.\n\n\n", (n3 % 2 == 0) ? "par" : "impar");
                 else if (fix4 == -1)
-                    printf("-->Primeira dica: O quarto n�mero � %s.\n\n\n", (n4 % 2 == 0) ? "par" : "�mpar");
+                    printf("-->Primeira dica: O quarto numero e %s.\n\n\n", (n4 % 2 == 0) ? "par" : "impar");
                 break;
 
                 case 6:
                 {
                 int soma = n1 + n2 + n3 + n4;
-                printf("-->Segunda dica: A soma dos d�gitos da senha � %d.\n\n", soma);
+                printf("-->Segunda dica: A soma dos digitos da senha e %d.\n\n", soma);
                 break;
                 }
 
@@ -150,30 +151,30 @@ int main()
                 if (n2 > maior) maior = n2;
                 if (n3 > maior) maior = n3;
                 if (n4 > maior) maior = n4;
-                printf("-->Terceira dica: O maior d�gito da senha � %d.\n\n", maior);
+                printf("-->Terceira dica: O maior digito da senha e %d.\n\n", maior);
                 break;
                 }
 
                 case 8:
-                printf("-->Quarta dica: An�lise dos d�gitos ainda n�o descobertos:\n\t");
+                printf("-->Quarta dica: Analise dos digitos ainda nao descobertos:\n\t");
                 if (fix1 == -1)
-                printf("- O primeiro d�gito � %s que 5.\n\n\n", (n1 >= 5) ? "maior ou igual" : "menor");
+                printf("- O primeiro digito e %s que 5.\n\n\n", (n1 >= 5) ? "maior ou igual" : "menor");
                 if (fix2 == -1)
-                printf("- O segundo d�gito � %s que 5.\n", (n2 >= 5) ? "maior ou igual" : "menor");
+                printf("- O segundo digito e %s que 5.\n", (n2 >= 5) ? "maior ou igual" : "menor");
                 if (fix3 == -1)
-                printf("- O terceiro d�gito � %s que 5.\n", (n3 >= 5) ? "maior ou igual" : "menor");
+                printf("- O terceiro digito e %s que 5.\n", (n3 >= 5) ? "maior ou igual" : "menor");
                 if (fix4 == -1)
-                printf("- O quarto d�gito � %s que 5.\n", (n4 >= 5) ? "maior ou igual" : "menor");
+                printf("- O quarto digito e %s que 5.\n", (n4 >= 5) ? "maior ou igual" : "menor");
                 break;
 
                 case 9:
                 if (n1 == n2 || n1 == n3 || n1 == n4 || n2 == n3 || n2 == n4 || n3 == n4)
                 {
-                    printf("-->Quinta dica: A senha cont�m d�gitos repetidos.\n");
+                    printf("-->Quinta dica: A senha contem digitos repetidos.\n");
                 }
                 else
                 {
-                    printf("-->Quinta dica: Todos os d�gitos da senha s�o diferentes.\n");
+                    printf("-->Quinta dica: Todos os digitos da senha sao diferentes.\n");
                 }
 
                 break;
@@ -184,24 +185,24 @@ int main()
             {
                 printf("\n\n");
                 printf("\n\n-----------------------------------------------------------------------------------------------------------------------");
-                printf("\n\n\t\t\tPARAB�NS!! Voc� acertou a senha em %d tentativa(s)!!\n\n\n\n", tentativa);
+                printf("\n\n\t\t\tPARABENS!! Voce acertou a senha em %d tentativa(s)!!\n\n\n\n", tentativa);
                 break;
             }
 
         printf("Pressione qualquer tecla para continuar\n\n");
-        getch();
+        _getch();
         }
         if (fix1 == -1 || fix2 == -1 || fix3 == -1 || fix4 == -1)
         {
             system("cls");
-            printf("\n\n\n\t\t\tFim de jogo! O n�mero correto era %d.\n\n", n);
+            printf("\n\n\n\t\t\tFim de jogo! O numero correto era %d.\n\n", n);
         }
 
     printf("Pressione qualquer tecla para continuar");
-    getch();
+    _getch();
     system("cls");
     printf("\n\n\n\t\t\tDeseja jogar novamente?\n\n");
-    printf("\n\t\t\tDigite 1 para jogar novamente ou outro n�mero para encerrar: ",j);
+    printf("\n\t\t\tDigite 1 para jogar novamente ou outro numero para encerrar: ",j);
     scanf("%d",&j);
 
     fix1 = fix2 = fix3 = fix4 = -1;
